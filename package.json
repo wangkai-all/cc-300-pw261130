@@ -1,0 +1,16 @@
+{
+  "name": "transfer-plan-board",
+  "version": "1.0.0",
+  "private": true,
+  "description": "事件库存驱动的仓间转运方案台：试算比较、占用确认、执行与回放",
+  "type": "module",
+  "engines": {
+    "node": ">=22.5"
+  },
+  "scripts": {
+    "start": "node src/app.mjs",
+    "dev": "node --watch src/app.mjs",
+    "test": "node --test test/*.test.mjs",
+    "test:watch": "node --test --watch test/*.test.mjs"
+  }
+}

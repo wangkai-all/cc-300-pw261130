@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>转运方案台 · 事件库存与仓间调拨</title>
+<link rel="stylesheet" href="/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📦</text></svg>">
+</head>
+<body>
+<div class="app">
+  <header class="topbar">
+    <div class="brand">
+      <h1>转运方案台</h1>
+      <span class="sub">事件库存 · 试算比较 · 占用确认 · 回放</span>
+    </div>
+    <div class="spacer"></div>
+    <div class="day-chip">演示日期 <b id="todayChip">—</b></div>
+    <div class="planner-pick">
+      <label for="planner">当前计划员</label>
+      <select id="planner">
+        <option>林薇</option>
+        <option>赵启明</option>
+        <option>周航</option>
+      </select>
+    </div>
+    <button class="small" id="resetDemo" title="恢复本地虚构演示数据">重置演示</button>
+  </header>
+
+  <nav class="tabs" id="tabs">
+    <button class="tab active" data-tab="overview">概览</button>
+    <button class="tab" data-tab="compare">试算比较</button>
+    <button class="tab" data-tab="plans">方案与占用</button>
+    <button class="tab" data-tab="execute">执行与回放</button>
+    <button class="tab" data-tab="recovery">恢复任务</button>
+  </nav>
+
+  <main id="view"></main>
+</div>
+
+<div id="modalRoot"></div>
+<div id="toast" class="toast"></div>
+<script type="module" src="/app.js"></script>
+</body>
+</html>
